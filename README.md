@@ -19,6 +19,7 @@ scooter_rent=# select o.track, case when o.finished='t' then 2 when o.cancelled=
 -----------------------
 
 
+Результат:
 
  track  | case
 --------+------
