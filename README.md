@@ -2,6 +2,7 @@
 Первое задание второй части
 
 scooter_rent=# 
+
 select c.login, count(*) from "Couriers" c join "Orders" o on o."courierId"=c.id where o."inDelivery"='t' group by c.login;
 
 --------------------------------------------- 
@@ -15,7 +16,8 @@ select c.login, count(*) from "Couriers" c join "Orders" o on o."courierId"=c.id
 
 Второе задание:
 
-scooter_rent=# select o.track, case when o.finished='t' then 2 when o.cancelled='t' then -1 when o."inDelivery"='t' then 1 else 0 end from "Orders" o;
+scooter_rent=# 
+select o.track, case when o.finished='t' then 2 when o.cancelled='t' then -1 when o."inDelivery"='t' then 1 else 0 end from "Orders" o;
 -----------------------
 
 
